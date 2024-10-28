@@ -11,66 +11,107 @@ import CtaSection from './cta.js';
 import sec from './sec.png';
 import sec2 from './sec2.png';
 import sec3 from './sec3.png';
+import start from "./start.png";
+import open from './open.png';
+import upgrade from './upgrade.png';
+import foot from './foot.png';
+
 export default function App() {
   return (
-    <><div style={styles.container}>
-      {/* Navbar */}
-      <nav style={styles.navbar}>
-        <div style={styles.logo}>Upgrade</div>
-        <ul style={styles.navLinks}>
-          <li>Personal Loan</li>
-          <li>One Card</li>
-          <li>Savings</li>
-          <li>Checking</li>
-          <li>Help</li>
-        </ul>
-        <button style={styles.signInButton}>Sign In</button>
-      </nav>
+    <>
+      <div style={styles.container}>
+        {/* Navbar */}
+        <nav style={styles.navbar}>
+          <img src={upgrade} alt="" />
+          <ul style={styles.navLinks}>
+            <li>Personal Loan</li>
+            <li>One Card</li>
+            <li>Savings</li>
+            <li>Checking</li>
+            <li>Help</li>
+          </ul>
+          <button style={styles.signInButton}>Sign In</button>
+        </nav>
 
-      {/* Hero Section */}
-      <div style={styles.heroSection}>
-        <div style={styles.textContent}>
-          <span style={styles.trustedBadge}>🔥 100% TRUSTED PLATFORM</span>
-          <h1 style={styles.heroHeading}>
-            FINANCE WITH SECURITY AND <span style={styles.highlightText}>FLEXIBILITY</span>
-          </h1>
-          <p style={styles.heroSubheading}>
-            No-Fee Checking Account With Cash Back Rewards. Enjoy Fee-Free Spending And Earn Cash Back On Your Everyday
-            Purchases.
-          </p>
-          <button style={styles.openAccountButton}>Open Account →</button>
+        {/* Hero Section */}
+        <div style={styles.heroSection}>
+          <div style={styles.textContent}>
+            <span style={styles.trustedBadge}>🔥 100% TRUSTED PLATFORM</span>
+            <h1 style={styles.heroHeading}>
+              FINANCE WITH SECURITY AND <span style={styles.highlightText}>FLEXIBILITY</span>
+            </h1>
+            <p style={styles.heroSubheading}>
+              No-Fee Checking Account With Cash Back Rewards. Enjoy Fee-Free Spending And Earn Cash Back On Your Everyday
+              Purchases.
+            </p>
+            <br />
+            <br />
+            <img src={open} alt="" />
+          </div>
+
+          <div style={styles.imageSection}>
+            <img
+              src={phone}
+              alt="Mobile showing transaction"
+              style={styles.heroImage} />
+          </div>
         </div>
 
-        <div style={styles.imageSection}>
-          <img
-            src={phone}
-            alt="Mobile showing transaction"
-            style={styles.heroImage} />
+        {/* Footer Section with Logos */}
+        <div style={styles.footer}>
+          <img src={sph} alt="Spherule" style={styles.footerLogo} />
+          <img src={sam} alt="Samsung Pay" style={styles.footerLogo} />
+          <img src={visa} alt="Visa" style={styles.footerLogo} />
+          <img src={ama} alt="Amazon Pay" style={styles.footerLogo} />
+          <img src={pay} alt="Paypal" style={styles.footerLogo} />
+          <img src={ali} alt="Alipay" style={styles.footerLogo} />
         </div>
       </div>
-
-      {/* Footer Section with Logos */}
-      <div style={styles.footer}>
-        <img src={sph} alt="Spherule" style={styles.footerLogo} />
-        <img src={sam} alt="Samsung Pay" style={styles.footerLogo} />
-        <img src={visa} alt="Visa" style={styles.footerLogo} />
-        <img src={ama} alt="Amazon Pay" style={styles.footerLogo} />
-        <img src={pay} alt="Paypal" style={styles.footerLogo} />
-        <img src={ali} alt="Alipay" style={styles.footerLogo} />
-      </div>
-    </div>
       <ChartSection />
       <CtaSection />
-      <img style={{
-        width: "80%",
-      }} src={sec} alt="" />
-      <img style={{
-        width: "80%",
-      }} src={sec2} alt="" />
-      <img style={{
-        width: "80%",
-        alignItems: "center",
-      }} src={sec3} alt="" />
+      <div style={styles.imageWrapper}>
+        <img style={styles.image} src={sec} alt="" />
+      </div>
+      <div style={styles.imageWrapper}>
+        <img style={styles.image} src={sec2} alt="" />
+      </div>
+      <div style={styles.imageWrapper}>
+        <img style={styles.image} src={sec3} alt="" />
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <div style={styles.imageWrapper}>
+        <img style={styles.image} src={start} alt="" />
+      </div>
+      <br />
+      <br />
+      <br />
+      <div style={styles.imageWrapper}>
+        <img style={styles.image} src={foot} alt="" />
+      </div>
     </>
   );
 }
@@ -167,5 +208,13 @@ const styles = {
   footerLogo: {
     margin: "0 20px",
     height: "40px",
+  },
+  imageWrapper: {
+    display: "flex",
+    justifyContent: "center",
+    margin: "20px 0",
+  },
+  image: {
+    width: "80%",
   },
 };

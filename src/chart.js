@@ -30,6 +30,7 @@ export default function App() {
 
                 {/* Tracker and Info Section */}
                 <div style={styles.infoSection}>
+                    <h1>ALL YOUR MONEY <br /> NEEDS IN ONE APP</h1>
                     <div style={styles.expensesTrackerCard}>
                         <h3 style={styles.trackerTitle}>Expenses Tracker</h3>
                         <p style={styles.trackerDescription}>

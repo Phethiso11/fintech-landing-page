@@ -72,9 +72,17 @@ export default function App() {
       <div style={styles.imageWrapper}>
         <img style={styles.image} src={sec} alt="" />
       </div>
+      <br />
+      <br />
+      <br />
+      <br />
       <div style={styles.imageWrapper}>
         <img style={styles.image} src={sec2} alt="" />
       </div>
+      <br />
+      <br />
+      <br />
+      <br />
       <div style={styles.imageWrapper}>
         <img style={styles.image} src={sec3} alt="" />
       </div>
@@ -157,6 +165,7 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     padding: "80px 100px",
+    flexWrap: "wrap", // Allow wrapping on smaller screens
   },
   textContent: {
     flex: 1,
@@ -193,6 +202,9 @@ const styles = {
   },
   imageSection: {
     flex: 1,
+    display: "flex",
+    justifyContent: "center", // Center the image on smaller screens
+    alignItems: "center",
   },
   heroImage: {
     width: "400px",
@@ -204,6 +216,7 @@ const styles = {
     borderTop: "1px solid rgba(255, 255, 255, 0.2)",
     marginTop: "50px",
     backgroundColor: "#04684C",
+    flexWrap: "wrap", // Allow wrapping for logos
   },
   footerLogo: {
     margin: "0 20px",
@@ -216,5 +229,40 @@ const styles = {
   },
   image: {
     width: "80%",
+  },
+  // Mobile styles
+  '@media (max-width: 768px)': {
+    navbar: {
+      flexDirection: "column", // Stack items vertically
+      alignItems: "flex-start",
+      padding: "10px 20px",
+    },
+    heroSection: {
+      padding: "40px 20px",
+      flexDirection: "column", // Stack text and image vertically
+      alignItems: "center",
+      textAlign: "center", // Center text
+    },
+    textContent: {
+      paddingRight: "0", // Remove right padding
+      paddingBottom: "20px", // Add bottom padding
+    },
+    heroHeading: {
+      fontSize: "36px", // Reduce heading size
+      lineHeight: "40px",
+    },
+    heroSubheading: {
+      fontSize: "16px", // Reduce subheading size
+    },
+    heroImage: {
+      width: "100%", // Make image responsive
+      maxWidth: "400px", // Max width constraint
+    },
+    footer: {
+      flexDirection: "column", // Stack logos vertically
+    },
+    footerLogo: {
+      margin: "10px 0", // Vertical margin for logos
+    },
   },
 };
